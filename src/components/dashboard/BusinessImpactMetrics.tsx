@@ -15,12 +15,12 @@ export const BusinessImpactMetrics = () => {
   ];
 
   const absenteeismData = [
-    { month: "Jan", days: 4.2, cost: 15400 },
-    { month: "Feb", days: 3.8, cost: 13900 },
-    { month: "Mar", days: 3.5, cost: 12800 },
-    { month: "Apr", days: 3.1, cost: 11300 },
-    { month: "May", days: 2.9, cost: 10600 },
-    { month: "Jun", days: 2.4, cost: 8800 }
+    { month: "Jan", days: 4.2, cost: 1540000 },
+    { month: "Feb", days: 3.8, cost: 1390000 },
+    { month: "Mar", days: 3.5, cost: 1280000 },
+    { month: "Apr", days: 3.1, cost: 1130000 },
+    { month: "May", days: 2.9, cost: 1060000 },
+    { month: "Jun", days: 2.4, cost: 880000 }
   ];
 
   const retentionMetrics = [
@@ -35,9 +35,9 @@ export const BusinessImpactMetrics = () => {
     productivity: { label: "Productivity Index", color: "#3b82f6" },
     presenteeism: { label: "Presenteeism Reduction", color: "#10b981" },
     days: { label: "Absence Days", color: "#ef4444" },
-    cost: { label: "Cost ($)", color: "#f59e0b" },
-    before: { label: "Before Sahara", color: "#94a3b8" },
-    after: { label: "After Sahara", color: "#10b981" }
+    cost: { label: "Cost (₹)", color: "#f59e0b" },
+    before: { label: "Before MindSukh", color: "#94a3b8" },
+    after: { label: "After MindSukh", color: "#10b981" }
   };
 
   return (
@@ -74,7 +74,7 @@ export const BusinessImpactMetrics = () => {
           <CardContent className="flex items-center p-6">
             <div className="flex-1">
               <p className="text-sm text-muted-foreground">Cost Savings</p>
-              <p className="text-2xl font-bold text-green-600">$342K</p>
+              <p className="text-2xl font-bold text-green-600">₹2.85Cr</p>
               <p className="text-xs text-muted-foreground flex items-center">
                 <DollarSign className="h-3 w-3 mr-1" /> annual projected
               </p>
@@ -154,7 +154,7 @@ export const BusinessImpactMetrics = () => {
         <Card className="lg:col-span-2">
           <CardHeader>
             <CardTitle>Retention Rate by Department</CardTitle>
-            <p className="text-sm text-muted-foreground">Before vs. after Sahara implementation</p>
+            <p className="text-sm text-muted-foreground">Before vs. after MindSukh implementation</p>
           </CardHeader>
           <CardContent>
             <ChartContainer config={chartConfig} className="h-[300px]">
@@ -182,11 +182,11 @@ export const BusinessImpactMetrics = () => {
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Increased output</span>
-                  <span className="font-medium">$180,000</span>
+                  <span className="font-medium">₹1,50,00,000</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Reduced presenteeism</span>
-                  <span className="font-medium">$95,000</span>
+                  <span className="font-medium">₹79,00,000</span>
                 </div>
               </div>
             </div>
@@ -195,11 +195,11 @@ export const BusinessImpactMetrics = () => {
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Saved sick days</span>
-                  <span className="font-medium">$78,000</span>
+                  <span className="font-medium">₹65,00,000</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Reduced temp costs</span>
-                  <span className="font-medium">$42,000</span>
+                  <span className="font-medium">₹35,00,000</span>
                 </div>
               </div>
             </div>
@@ -208,11 +208,11 @@ export const BusinessImpactMetrics = () => {
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Reduced turnover</span>
-                  <span className="font-medium">$165,000</span>
+                  <span className="font-medium">₹1,37,00,000</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Lower recruitment</span>
-                  <span className="font-medium">$67,000</span>
+                  <span className="font-medium">₹56,00,000</span>
                 </div>
               </div>
             </div>
@@ -220,7 +220,7 @@ export const BusinessImpactMetrics = () => {
           <div className="border-t pt-4 mt-6">
             <div className="flex justify-between text-lg font-bold">
               <span>Total Annual Savings</span>
-              <span className="text-green-600">$627,000</span>
+              <span className="text-green-600">₹5,22,00,000</span>
             </div>
           </div>
         </CardContent>

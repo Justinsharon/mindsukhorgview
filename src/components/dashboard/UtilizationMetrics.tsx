@@ -37,7 +37,7 @@ export const UtilizationMetrics = () => {
       <Card>
         <CardHeader>
           <CardTitle>Overall Utilization Rate</CardTitle>
-          <p className="text-sm text-muted-foreground">67.3% of employees have accessed Sahara</p>
+          <p className="text-sm text-muted-foreground">67.3% of employees have accessed MindSukh</p>
         </CardHeader>
         <CardContent>
           <ChartContainer config={chartConfig} className="h-[300px]">

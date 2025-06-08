@@ -6,38 +6,38 @@ import { Calculator, DollarSign, TrendingUp } from "lucide-react";
 
 export const ROICalculation = () => {
   const roiTimeline = [
-    { month: "Month 1", investment: 45000, returns: 12000, cumulative: -33000 },
-    { month: "Month 3", investment: 45000, returns: 35000, cumulative: -10000 },
-    { month: "Month 6", investment: 45000, returns: 62000, cumulative: 17000 },
-    { month: "Month 9", investment: 45000, returns: 89000, cumulative: 44000 },
-    { month: "Month 12", investment: 45000, returns: 128000, cumulative: 83000 }
+    { month: "Month 1", investment: 3750000, returns: 1000000, cumulative: -2750000 },
+    { month: "Month 3", investment: 3750000, returns: 2916667, cumulative: -833333 },
+    { month: "Month 6", investment: 3750000, returns: 5166667, cumulative: 1416667 },
+    { month: "Month 9", investment: 3750000, returns: 7416667, cumulative: 3666667 },
+    { month: "Month 12", investment: 3750000, returns: 10666667, cumulative: 6916667 }
   ];
 
   const costBreakdown = [
-    { category: "Platform License", amount: 180000 },
-    { category: "Implementation", amount: 25000 },
-    { category: "Training", amount: 15000 },
-    { category: "Support", amount: 18000 }
+    { category: "Platform License", amount: 15000000 },
+    { category: "Implementation", amount: 2083334 },
+    { category: "Training", amount: 1250000 },
+    { category: "Support", amount: 1500000 }
   ];
 
   const returnBreakdown = [
-    { category: "Productivity Gains", amount: 275000 },
-    { category: "Absence Reduction", amount: 120000 },
-    { category: "Retention Savings", amount: 232000 },
-    { category: "Healthcare Savings", amount: 45000 }
+    { category: "Productivity Gains", amount: 22916667 },
+    { category: "Absence Reduction", amount: 10000000 },
+    { category: "Retention Savings", amount: 19333334 },
+    { category: "Healthcare Savings", amount: 3750000 }
   ];
 
   const benchmarkData = [
     { metric: "Our ROI", value: 285, benchmark: 150 },
     { metric: "Payback Period", value: 4.2, benchmark: 8.5 },
-    { metric: "Cost per Employee", value: 119, benchmark: 200 }
+    { metric: "Cost per Employee", value: 9917, benchmark: 16667 }
   ];
 
   const chartConfig = {
     investment: { label: "Investment", color: "#ef4444" },
     returns: { label: "Returns", color: "#10b981" },
     cumulative: { label: "Cumulative ROI", color: "#3b82f6" },
-    amount: { label: "Amount ($)", color: "#8b5cf6" },
+    amount: { label: "Amount (₹)", color: "#8b5cf6" },
     value: { label: "Our Performance", color: "#10b981" },
     benchmark: { label: "Industry Benchmark", color: "#94a3b8" }
   };
@@ -51,7 +51,7 @@ export const ROICalculation = () => {
             <div className="flex-1">
               <p className="text-sm text-muted-foreground">Total ROI</p>
               <p className="text-3xl font-bold text-green-600">285%</p>
-              <p className="text-xs text-muted-foreground">$2.85 return per $1 invested</p>
+              <p className="text-xs text-muted-foreground">₹2.85 return per ₹1 invested</p>
             </div>
             <TrendingUp className="h-8 w-8 text-green-600" />
           </CardContent>
@@ -72,7 +72,7 @@ export const ROICalculation = () => {
           <CardContent className="flex items-center p-6">
             <div className="flex-1">
               <p className="text-sm text-muted-foreground">Net Benefit</p>
-              <p className="text-3xl font-bold text-green-600">$434K</p>
+              <p className="text-3xl font-bold text-green-600">₹3.61Cr</p>
               <p className="text-xs text-muted-foreground">annual net savings</p>
             </div>
             <DollarSign className="h-8 w-8 text-green-600" />
@@ -145,7 +145,7 @@ export const ROICalculation = () => {
             <div className="mt-4">
               <div className="flex justify-between font-bold">
                 <span>Total Investment</span>
-                <span>$238,000</span>
+                <span>₹1,98,33,334</span>
               </div>
             </div>
           </CardContent>
@@ -168,7 +168,7 @@ export const ROICalculation = () => {
             <div className="mt-4">
               <div className="flex justify-between font-bold">
                 <span>Total Returns</span>
-                <span>$672,000</span>
+                <span>₹5,60,00,001</span>
               </div>
             </div>
           </CardContent>
@@ -189,13 +189,13 @@ export const ROICalculation = () => {
                   {costBreakdown.map((item, index) => (
                     <div key={index} className="flex justify-between">
                       <span>{item.category}</span>
-                      <span>${item.amount.toLocaleString()}</span>
+                      <span>₹{(item.amount / 100000).toFixed(1)}L</span>
                     </div>
                   ))}
                   <div className="border-t pt-2 font-bold">
                     <div className="flex justify-between">
                       <span>Total Investment</span>
-                      <span>$238,000</span>
+                      <span>₹1.98Cr</span>
                     </div>
                   </div>
                 </div>
@@ -207,13 +207,13 @@ export const ROICalculation = () => {
                   {returnBreakdown.map((item, index) => (
                     <div key={index} className="flex justify-between">
                       <span>{item.category}</span>
-                      <span>${item.amount.toLocaleString()}</span>
+                      <span>₹{(item.amount / 10000000).toFixed(1)}Cr</span>
                     </div>
                   ))}
                   <div className="border-t pt-2 font-bold">
                     <div className="flex justify-between">
                       <span>Total Returns</span>
-                      <span>$672,000</span>
+                      <span>₹5.60Cr</span>
                     </div>
                   </div>
                 </div>
@@ -224,7 +224,7 @@ export const ROICalculation = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
                 <div>
                   <div className="text-sm text-muted-foreground">Net Benefit</div>
-                  <div className="text-2xl font-bold text-green-600">$434,000</div>
+                  <div className="text-2xl font-bold text-green-600">₹3.61Cr</div>
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">ROI Percentage</div>
@@ -232,7 +232,7 @@ export const ROICalculation = () => {
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Cost Per Employee</div>
-                  <div className="text-2xl font-bold text-blue-600">$119</div>
+                  <div className="text-2xl font-bold text-blue-600">₹9,917</div>
                 </div>
               </div>
             </div>
